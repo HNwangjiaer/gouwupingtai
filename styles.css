@@ -87,6 +87,12 @@ main,
   letter-spacing: 0.02em;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .top-nav {
   display: flex;
   align-items: center;
@@ -102,6 +108,32 @@ main,
 
 .top-nav a:hover {
   color: var(--ink);
+}
+
+.lang-switch {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: 700;
+  cursor: pointer;
+  min-width: 42px;
+}
+
+.lang-btn.active {
+  background: #241710;
+  color: #fff;
 }
 
 .cart-pill {
@@ -518,6 +550,15 @@ cite {
 @media (max-width: 680px) {
   .site-header {
     margin-top: 12px;
+    padding: 12px;
+  }
+
+  .brand {
+    font-size: 1.3rem;
+  }
+
+  .header-actions {
+    gap: 6px;
   }
 
   .hero {

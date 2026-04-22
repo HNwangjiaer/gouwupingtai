@@ -16,115 +16,121 @@
   <header class="site-header">
     <div class="brand">NovaCart</div>
     <nav class="top-nav">
-      <a href="#featured">Featured</a>
-      <a href="#categories">Categories</a>
-      <a href="#deals">Deals</a>
-      <a href="#community">Community</a>
+      <a href="#featured" data-i18n="nav.featured">Featured</a>
+      <a href="#categories" data-i18n="nav.categories">Categories</a>
+      <a href="#deals" data-i18n="nav.deals">Deals</a>
+      <a href="#community" data-i18n="nav.community">Community</a>
     </nav>
-    <button id="cartButton" class="cart-pill" aria-label="Open cart">
-      Cart
-      <span id="cartCount">0</span>
-    </button>
+    <div class="header-actions">
+      <div class="lang-switch" aria-label="Language switch">
+        <button id="langEn" class="lang-btn active" data-lang="en">EN</button>
+        <button id="langZh" class="lang-btn" data-lang="zh">中</button>
+      </div>
+      <button id="cartButton" class="cart-pill" aria-label="Open cart" data-i18n-aria-label="cart.openAria">
+        <span data-i18n="cart.label">Cart</span>
+        <span id="cartCount">0</span>
+      </button>
+    </div>
   </header>
 
   <main>
     <section class="hero section-reveal">
-      <p class="tagline">Curated for everyday upgrades</p>
-      <h1>Shop the next wave of smart essentials.</h1>
-      <p class="hero-text">
+      <p class="tagline" data-i18n="hero.tagline">Curated for everyday upgrades</p>
+      <h1 data-i18n="hero.title">Shop the next wave of smart essentials.</h1>
+      <p class="hero-text" data-i18n="hero.text">
         A modern shopping platform with fresh drops, fast checkout, and a clean buying experience.
       </p>
       <div class="hero-actions">
-        <a href="#featured" class="btn btn-primary">Explore products</a>
-        <a href="#deals" class="btn btn-secondary">See best deals</a>
+        <a href="#featured" class="btn btn-primary" data-i18n="hero.explore">Explore products</a>
+        <a href="#deals" class="btn btn-secondary" data-i18n="hero.bestDeals">See best deals</a>
       </div>
       <div class="metrics">
         <article>
           <h3>24h</h3>
-          <p>Average delivery</p>
+          <p data-i18n="metrics.delivery">Average delivery</p>
         </article>
         <article>
           <h3>1.2M+</h3>
-          <p>Orders fulfilled</p>
+          <p data-i18n="metrics.orders">Orders fulfilled</p>
         </article>
         <article>
           <h3>4.9/5</h3>
-          <p>Customer rating</p>
+          <p data-i18n="metrics.rating">Customer rating</p>
         </article>
       </div>
     </section>
 
     <section id="categories" class="category-strip section-reveal">
-      <h2>Shop by Category</h2>
-      <div class="tabs" role="tablist" aria-label="Product category tabs">
-        <button class="tab active" data-filter="all">All</button>
-        <button class="tab" data-filter="tech">Tech</button>
-        <button class="tab" data-filter="home">Home</button>
-        <button class="tab" data-filter="fitness">Fitness</button>
-        <button class="tab" data-filter="audio">Audio</button>
+      <h2 data-i18n="categories.title">Shop by Category</h2>
+      <div class="tabs" role="tablist" aria-label="Product category tabs" data-i18n-aria-label="categories.aria">
+        <button class="tab active" data-filter="all" data-i18n="tabs.all">All</button>
+        <button class="tab" data-filter="tech" data-i18n="tabs.tech">Tech</button>
+        <button class="tab" data-filter="home" data-i18n="tabs.home">Home</button>
+        <button class="tab" data-filter="fitness" data-i18n="tabs.fitness">Fitness</button>
+        <button class="tab" data-filter="audio" data-i18n="tabs.audio">Audio</button>
       </div>
     </section>
 
     <section id="featured" class="products section-reveal">
-      <h2>Featured Picks</h2>
+      <h2 data-i18n="featured.title">Featured Picks</h2>
       <div class="product-grid">
-        <article class="card" data-category="tech" data-price="249">
-          <div class="card-badge">Best Seller</div>
-          <h3>Pulse Smartwatch X2</h3>
-          <p>Track health, notifications, and performance with a vivid AMOLED display.</p>
+        <article class="card" data-category="tech" data-product="smartwatch" data-price="249">
+          <div class="card-badge" data-i18n="products.smartwatch.badge">Best Seller</div>
+          <h3 data-i18n="products.smartwatch.name">Pulse Smartwatch X2</h3>
+          <p data-i18n="products.smartwatch.desc">Track health, notifications, and performance with a vivid AMOLED display.</p>
           <div class="card-footer">
             <strong>$249</strong>
-            <button class="add-btn">Add to cart</button>
+            <button class="add-btn" data-i18n="buttons.addToCart">Add to cart</button>
           </div>
         </article>
 
-        <article class="card" data-category="home" data-price="179">
-          <div class="card-badge">New</div>
-          <h3>Glow Air Purifier Mini</h3>
-          <p>Compact filtration designed for bedrooms, studios, and home offices.</p>
+        <article class="card" data-category="home" data-product="airpurifier" data-price="179">
+          <div class="card-badge" data-i18n="products.airpurifier.badge">New</div>
+          <h3 data-i18n="products.airpurifier.name">Glow Air Purifier Mini</h3>
+          <p data-i18n="products.airpurifier.desc">Compact filtration designed for bedrooms, studios, and home offices.</p>
           <div class="card-footer">
             <strong>$179</strong>
-            <button class="add-btn">Add to cart</button>
+            <button class="add-btn" data-i18n="buttons.addToCart">Add to cart</button>
           </div>
         </article>
 
-        <article class="card" data-category="fitness" data-price="129">
-          <div class="card-badge">Limited</div>
-          <h3>Motion Resistance Kit</h3>
-          <p>Five resistance levels with premium handles and travel-ready storage bag.</p>
+        <article class="card" data-category="fitness" data-product="resistancekit" data-price="129">
+          <div class="card-badge" data-i18n="products.resistancekit.badge">Limited</div>
+          <h3 data-i18n="products.resistancekit.name">Motion Resistance Kit</h3>
+          <p data-i18n="products.resistancekit.desc">Five resistance levels with premium handles and travel-ready storage bag.</p>
           <div class="card-footer">
             <strong>$129</strong>
-            <button class="add-btn">Add to cart</button>
+            <button class="add-btn" data-i18n="buttons.addToCart">Add to cart</button>
           </div>
         </article>
 
-        <article class="card" data-category="audio" data-price="299">
-          <div class="card-badge">Top Rated</div>
-          <h3>Orbit Noise-Cancel Headphones</h3>
-          <p>Immersive sound, adaptive ANC, and up to 40 hours of battery life.</p>
+        <article class="card" data-category="audio" data-product="headphones" data-price="299">
+          <div class="card-badge" data-i18n="products.headphones.badge">Top Rated</div>
+          <h3 data-i18n="products.headphones.name">Orbit Noise-Cancel Headphones</h3>
+          <p data-i18n="products.headphones.desc">Immersive sound, adaptive ANC, and up to 40 hours of battery life.</p>
           <div class="card-footer">
             <strong>$299</strong>
-            <button class="add-btn">Add to cart</button>
+            <button class="add-btn" data-i18n="buttons.addToCart">Add to cart</button>
           </div>
         </article>
 
-        <article class="card" data-category="tech" data-price="89">
-          <div class="card-badge">Value Pick</div>
-          <h3>MagSafe Power Dock</h3>
-          <p>Charge phone, earbuds, and watch with one minimal desk setup.</p>
+        <article class="card" data-category="tech" data-product="powerdock" data-price="89">
+          <div class="card-badge" data-i18n="products.powerdock.badge">Value Pick</div>
+          <h3 data-i18n="products.powerdock.name">MagSafe Power Dock</h3>
+          <p data-i18n="products.powerdock.desc">Charge phone, earbuds, and watch with one minimal desk setup.</p>
           <div class="card-footer">
             <strong>$89</strong>
-            <button class="add-btn">Add to cart</button>
+            <button class="add-btn" data-i18n="buttons.addToCart">Add to cart</button>
           </div>
         </article>
 
-        <article class="card" data-category="home" data-price="59">
-          <div class="card-badge">Hot Deal</div>
-          <h3>Luma Smart Lamp</h3>
-          <p>Color scenes, scheduling, and voice control in one elegant lamp body.</p>
+        <article class="card" data-category="home" data-product="smartlamp" data-price="59">
+          <div class="card-badge" data-i18n="products.smartlamp.badge">Hot Deal</div>
+          <h3 data-i18n="products.smartlamp.name">Luma Smart Lamp</h3>
+          <p data-i18n="products.smartlamp.desc">Color scenes, scheduling, and voice control in one elegant lamp body.</p>
           <div class="card-footer">
             <strong>$59</strong>
-            <button class="add-btn">Add to cart</button>
+            <button class="add-btn" data-i18n="buttons.addToCart">Add to cart</button>
           </div>
         </article>
       </div>
@@ -132,27 +138,27 @@
 
     <section id="deals" class="promo section-reveal">
       <div>
-        <p class="tagline">Weekend Drop</p>
-        <h2>Up to 45% off selected bundles</h2>
-        <p>Bundle tech + home essentials and unlock extra savings at checkout.</p>
+        <p class="tagline" data-i18n="promo.tagline">Weekend Drop</p>
+        <h2 data-i18n="promo.title">Up to 45% off selected bundles</h2>
+        <p data-i18n="promo.text">Bundle tech + home essentials and unlock extra savings at checkout.</p>
       </div>
-      <a href="#featured" class="btn btn-primary">Claim discounts</a>
+      <a href="#featured" class="btn btn-primary" data-i18n="promo.cta">Claim discounts</a>
     </section>
 
     <section id="community" class="testimonials section-reveal">
-      <h2>What shoppers say</h2>
+      <h2 data-i18n="community.title">What shoppers say</h2>
       <div class="review-grid">
         <blockquote>
-          "Checkout is clean and fast. Found exactly what I needed in minutes."
-          <cite>- Jamie L.</cite>
+          <span data-i18n="reviews.r1">"Checkout is clean and fast. Found exactly what I needed in minutes."</span>
+          <cite data-i18n="reviews.r1c">- Jamie L.</cite>
         </blockquote>
         <blockquote>
-          "The product curation is excellent. Every buy feels intentional."
-          <cite>- Morgan T.</cite>
+          <span data-i18n="reviews.r2">"The product curation is excellent. Every buy feels intentional."</span>
+          <cite data-i18n="reviews.r2c">- Morgan T.</cite>
         </blockquote>
         <blockquote>
-          "Love the delivery speed and the quality of their featured products."
-          <cite>- Riley K.</cite>
+          <span data-i18n="reviews.r3">"Love the delivery speed and the quality of their featured products."</span>
+          <cite data-i18n="reviews.r3c">- Riley K.</cite>
         </blockquote>
       </div>
     </section>
@@ -160,13 +166,13 @@
 
   <aside id="cartPanel" class="cart-panel" aria-hidden="true">
     <div class="cart-header">
-      <h3>Your cart</h3>
-      <button id="closeCart" aria-label="Close cart">x</button>
+      <h3 data-i18n="cart.title">Your cart</h3>
+      <button id="closeCart" aria-label="Close cart" data-i18n-aria-label="cart.closeAria">x</button>
     </div>
-    <p id="cartEmpty" class="cart-empty">No items yet.</p>
+    <p id="cartEmpty" class="cart-empty" data-i18n="cart.empty">No items yet.</p>
     <ul id="cartItems" class="cart-items"></ul>
     <div class="cart-total">
-      <span>Total</span>
+      <span data-i18n="cart.total">Total</span>
       <strong id="cartTotal">$0</strong>
     </div>
   </aside>
